@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: BechdelTestAPI
+    config:
+      y42_source:
+        type: python-ingest
+        function_size: S
+      y42:
+        apiVersion: v3
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    tables:
+      - name: BechdelTestAPI

@@ -47,6 +47,43 @@ sources:
             default_cursor_field: []
             source_defined_cursor: false
             source_defined_primary_key: []
+        columns:
+          - name: COMMENTS
+            data_type: NUMBER
+          - name: SHAREMENTIONS
+            data_type: NUMBER
+          - name: TIMERANGESTART
+            data_type: TIMESTAMP_NTZ
+          - name: SHAREID
+            data_type: TEXT
+          - name: COMPANYID
+            data_type: TEXT
+          - name: INTERVALENDTIME
+            data_type: TIMESTAMP_NTZ
+          - name: INTERVALSTARTTIME
+            data_type: TIMESTAMP_NTZ
+          - name: CLICKS
+            data_type: NUMBER
+          - name: LIKES
+            data_type: NUMBER
+          - name: UGCPOSTID
+            data_type: TEXT
+          - name: _Y42_EXTRACTED_AT
+            data_type: TIMESTAMP_NTZ
+          - name: SHARES
+            data_type: NUMBER
+          - name: ENGAGEMENT
+            data_type: TEXT
+          - name: UNIQUEIMPRESSIONS
+            data_type: NUMBER
+          - name: IMPRESSIONS
+            data_type: NUMBER
+          - name: TIMEGRANULARITY
+            data_type: TEXT
+          - name: COMMENTMENTIONS
+            data_type: NUMBER
+          - name: TIMERANGEEND
+            data_type: TIMESTAMP_NTZ
       - name: CompanyDetails
         config:
           y42_table:
