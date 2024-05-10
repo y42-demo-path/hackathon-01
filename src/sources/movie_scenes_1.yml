@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: bechdel_api
+  - name: movie_scenes_1
     config:
       y42_source:
         type: python-ingest
@@ -13,4 +13,4 @@ sources:
         users:
           - alma.liezenga@gmail.com
     tables:
-      - name: bechdel_api
+      - name: movie_scenes_1
