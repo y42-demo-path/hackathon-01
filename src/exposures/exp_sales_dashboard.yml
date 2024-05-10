@@ -3,7 +3,6 @@ version: 2
 exposures:
   - name: exp_sales_dashboard
     depends_on:
-      - ref('mrt_completed_orders')
       - ref('mrt_revenue_by_payment_method')
     owner:
       name: Rob de Wit
