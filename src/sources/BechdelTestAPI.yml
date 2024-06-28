@@ -14,3 +14,5 @@ sources:
           - alma.liezenga@gmail.com
     tables:
       - name: bechdel_api
+    description: "The API for https://bechdeltest.com/ where people can add new
+      movies’ ratings on the Bechdel test. "
