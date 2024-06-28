@@ -31,3 +31,20 @@ sources:
             group: null
             supported_sync_modes:
               - full_refresh
+        columns:
+          - name: UNCERTAINTY
+            data_type: TEXT
+          - name: E_MAIL_ADDRESS
+            data_type: TEXT
+          - name: BECHDEL_TEST_SCORE
+            data_type: TEXT
+          - name: MOVIE_IMDBID_
+            data_type: TEXT
+          - name: NAME_OR_HANDLE
+            data_type: TEXT
+          - name: TIJDSTEMPEL
+            data_type: TEXT
+          - name: _Y42_EXTRACTED_AT
+            data_type: TIMESTAMP_NTZ
+          - name: YOUR_COMMENT
+            data_type: TEXT
