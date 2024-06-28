@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: imdb_reviews_updated_weekly
+    config:
+      y42_source:
+        type: python-ingest
+        function_size: L
+      y42:
+        apiVersion: v3
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    tables:
+      - name: imdb_reviews
