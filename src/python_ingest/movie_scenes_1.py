@@ -36,7 +36,6 @@ def movie_scenes_1(context) -> pd.DataFrame:
     logging.info(zf.namelist)
     return
 
-
     # Return a DataFrame which will be materialized within your data warehouse
     df = pd.DataFrame(data)
 
