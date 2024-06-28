@@ -14,7 +14,7 @@ renamed AS (
 			WHEN "rating" = '1' THEN 'This movie has at least two women in it.'
 			WHEN "rating" = '2' THEN 'This movie has at least two women in it and they talk to each other.'
 			WHEN "rating" = '3' THEN 'This movie has at least two women in it and they talk to each other about something besides a man.'
-		END AS bechdel_description,
+		END AS bechdel_rating_description,
 		"id" AS bechdel_id,
 		"title" 
 	FROM source
