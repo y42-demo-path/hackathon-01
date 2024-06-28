@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: movie_scenes_1
+  - name: imdb_movies
     config:
       y42_source:
         type: python-ingest
-        function_size: S
+        function_size: L
       y42:
         apiVersion: v3
     meta:
@@ -13,4 +13,4 @@ sources:
         users:
           - alma.liezenga@gmail.com
     tables:
-      - name: movie_scenes_1
+      - name: imdb_movies
