@@ -6,7 +6,9 @@ source AS (
 
 renamed AS (
 	SELECT
-		"imdbid" AS imdb_id,
+		"id" AS bechdel_id,
+		'tt' || LPAD(CAST("imdbid" AS VARCHAR), 7, '0') AS imdb_id, 
+		"title",
 		"year",
 		"rating" AS bechdel_rating,
 		CASE
@@ -15,8 +17,6 @@ renamed AS (
 			WHEN "rating" = '2' THEN 'This movie has at least two women in it and they talk to each other.'
 			WHEN "rating" = '3' THEN 'This movie has at least two women in it and they talk to each other about something besides a man.'
 		END AS bechdel_rating_description,
-		"id" AS bechdel_id,
-		"title" 
 	FROM source
 )
 

@@ -12,8 +12,8 @@ renamed AS (
 		"averageRating" AS imdb_avg_rating,
 		"numVotes" AS num_votes_imdb_rating,
 		REGEXP_SUBSTR("genres", '[^,]+') AS first_genre, 
-		"genres",
-		"budget",
+		"genres" AS all_genres,
+		"budget"
 	FROM source
 )
 

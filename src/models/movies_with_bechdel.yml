@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: movies_with_bechdel
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    config:
+      y42:
+        apiVersion: v1
