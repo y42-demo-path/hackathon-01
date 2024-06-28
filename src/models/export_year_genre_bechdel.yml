@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: export_year_genre_bechdel
+    depends_on:
+      - ref('movies_meta_with_bechdel_incl')
+    owner:
+      name: Alma Liezenga
+      email: alma.liezenga@gmail.com
+    type: application
+    config:
+      y42_exposure:
+        type: python-action
+        function_size: S
+      y42:
+        apiVersion: v1
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
