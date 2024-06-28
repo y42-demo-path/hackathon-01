@@ -14,3 +14,28 @@ sources:
           - alma.liezenga@gmail.com
     tables:
       - name: imdb_movies
+        columns:
+          - name: release_date
+            data_type: TEXT
+          - name: isAdult
+            data_type: NUMBER
+          - name: averageRating
+            data_type: FLOAT
+          - name: genres
+            data_type: TEXT
+          - name: budget
+            data_type: NUMBER
+          - name: primaryTitle
+            data_type: TEXT
+          - name: originalTitle
+            data_type: TEXT
+          - name: numVotes
+            data_type: NUMBER
+          - name: id
+            data_type: TEXT
+          - name: directors
+            data_type: TEXT
+          - name: gross
+            data_type: FLOAT
+          - name: runtimeMinutes
+            data_type: NUMBER

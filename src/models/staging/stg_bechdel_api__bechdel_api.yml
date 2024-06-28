@@ -10,18 +10,17 @@ models:
       y42:
         apiVersion: v1
     columns:
-      - name: imdbid
-        description: ""
-        data_type: TEXT
       - name: year
-        description: ""
-        data_type: NUMBER
-      - name: rating
-        description: ""
-        data_type: NUMBER
-      - name: id
         description: ""
         data_type: NUMBER
       - name: title
         description: ""
         data_type: TEXT
+      - name: IMDB_ID
+        data_type: TEXT
+      - name: BECHDEL_RATING
+        data_type: NUMBER
+      - name: BECHDEL_RATING_DESCRIPTION
+        data_type: TEXT
+      - name: BECHDEL_ID
+        data_type: NUMBER

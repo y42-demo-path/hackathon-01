@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_imdb_movies__imdb_movies
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    config:
+      y42:
+        apiVersion: v1
+    columns: []
