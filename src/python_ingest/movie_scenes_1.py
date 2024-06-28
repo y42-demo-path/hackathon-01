@@ -26,8 +26,8 @@ def movie_scenes_1(context) -> pd.DataFrame:
      #   "Authorization": f"Basic {creds}"
     #}
 
-    # Your code goes here
-    url = "https://www.kaggle.com/api/v1/datasets/download/rajathmc/cornell-moviedialog-corpus"
+    # Your code goes here 
+    url = "https://www.kaggle.com/api/v1/datasets/download/gayathrirprog/imdb-reviews-of-moviesdownloaded-on-jan-19-2021"
     response = requests.get(url, auth=(username,key))
 
     logging.info(response.content)
