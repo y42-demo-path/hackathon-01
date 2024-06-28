@@ -6,18 +6,14 @@ source AS (
 
 renamed AS (
 	SELECT
-		"release_date",
-		"isAdult",
-		"averageRating" AS imdb_rating,
+		"id" AS imdb_id,
+		"primaryTitle" AS english_title,
+		"originalTitle" AS original_title,
+		"averageRating" AS imdb_avg_rating,
+		"numVotes" AS num_votes_imdb_rating,
+		REGEXP_SUBSTR("genres", '[^,]+') AS first_genre, 
 		"genres",
 		"budget",
-		"primaryTitle",
-		"originalTitle",
-		"numVotes",
-		"id" AS imdb_id,
-		"directors",
-		"gross",
-		"runtimeMinutes"
 	FROM source
 )
 
