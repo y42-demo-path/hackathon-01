@@ -8,13 +8,13 @@ renamed AS (
 	SELECT
 		"release_date",
 		"isAdult",
-		"averageRating",
+		"averageRating" AS imdb_rating,
 		"genres",
 		"budget",
 		"primaryTitle",
 		"originalTitle",
 		"numVotes",
-		"id",
+		"id" AS imdb_id,
 		"directors",
 		"gross",
 		"runtimeMinutes"

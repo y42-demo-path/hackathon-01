@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: input_form_bechdel_test
+    config:
+      y42_source:
+        type: source-google-sheets
+        connection: "Google sheets Alma "
+        settings:
+          row_batch_size: 1000
+          names_conversion: false
+      y42:
+        apiVersion: v3
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    tables:
+      - name: Formulierreacties_1
+        config:
+          y42_table:
+            import: Formulierreacties 1
+            columns:
+              - Tijdstempel
+              - Movie (IMDBid)
+              - Bechdel test score
+              - Uncertainty
+              - >-
+                Your comment
+
+                Please give some information on why this movie got this rating. In particular when a movie matches all tests, it's helpful to describe why it matches (for example, just because two women speak for half a minute in one scene, or because there are actual important female characters that discuss plot-relevant things regularly).
+              - |-
+                Name or handle
+                Leave blank if you want me to submit your input under my name. 
+              - >-
+                E-mail address
+
+                Leave blank if you want me to submit your input under my e-mail. 
+            group: null
+            supported_sync_modes:
+              - full_refresh
