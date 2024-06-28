@@ -6,14 +6,11 @@ source AS (
 
 renamed AS (
 	SELECT
-		"UNCERTAINTY",
-		"E_MAIL_ADDRESS",
-		"BECHDEL_TEST_SCORE",
-		"MOVIE_IMDBID_",
-		"NAME_OR_HANDLE",
-		"TIJDSTEMPEL",
-		"_Y42_EXTRACTED_AT",
-		"YOUR_COMMENT"
+		"MOVIE_IMDBID_" AS imdb_id,
+		"BECHDEL_TEST_SCORE" AS new_bechdel_rating,
+		"YOUR_COMMENT" AS bechdel_comment, 
+		IFF(LEN("NAME_OR_HANDLE" > 0), "NAME_OR_HANDLE", 'Alma') AS submitter_name, 
+		"E_MAIL_ADDRESS" AS submitter_e_mail
 	FROM source
 )
 
