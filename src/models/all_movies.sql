@@ -12,7 +12,7 @@ joined AS (
 	SELECT
 		si.imdb_id,
 		sb."title", 
-		sb."year", 
+		si.release_year, 
 		sb.bechdel_rating,
 		sb.bechdel_rating_description,
 		si.imdb_avg_rating,
