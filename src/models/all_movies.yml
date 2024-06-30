@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: bechdel_movies
+  - name: all_movies
     meta:
       experts:
         users:

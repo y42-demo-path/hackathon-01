@@ -1,10 +1,4 @@
-WITH
-
-source AS (
-	SELECT * FROM {{ ref('stg_bechdel_api__bechdel_api') }}
-),
-
-transformed AS (
+{# transformed AS (
 	SELECT 
     	"year",
 		COUNT(*) AS total_movies,
@@ -18,6 +12,35 @@ transformed AS (
     	"year"
 	ORDER BY 
     	"year"
-)
+) #}
  
-select * from transformed 
+WITH 
+
+s_bechdel AS (
+	SELECT * FROM {{ ref('stg_bechdel_api__bechdel_api') }}
+),
+
+s_imdb AS (
+	SELECT * FROM {{ ref('stg_imdb_movies__imdb_movies') }}
+),
+
+joined AS (
+	SELECT
+		imdb_id,
+		sb.title, 
+		sb."year", 
+		sb.bechdel_rating,
+		sb.bechdel_rating_description,
+		si.imdb_avg_rating,
+		si.num_votes_imdb_rating,
+		si.first_genre, 
+		si.all_genres,
+		si.budget,
+		si.gross
+	FROM 
+    	s_bechdel sb
+	INNER JOIN s_imdb AS si
+		ON sb.imdb_id = si.imdb_id
+)
+
+select * from joined
