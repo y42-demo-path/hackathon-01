@@ -24,7 +24,7 @@ max_ratings AS (
 aggregated AS (
     SELECT
         am.imdb_id,
-        am."title",
+        am.original_title,
         am.first_genre,
         am.release_year,
         am.imdb_avg_rating
