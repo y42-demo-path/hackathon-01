@@ -7,7 +7,7 @@ a_movies AS (
 aggregated AS (
 	SELECT
 		first_genre,
-		"year",
+		release_year,
 		AVG("budget") AS avg_budget,
         AVG("gross") AS avg_gross, 
         COUNT(*) AS total_movies,
@@ -15,10 +15,10 @@ aggregated AS (
     	a_movies
 	GROUP BY 
     	first_genre,
-    	"year"
+    	RELEASE_YEAR
 	ORDER BY 
     	first_genre,
-    	"year"
+    	RELEASE_YEAR
 )
 
 select * from aggregated
