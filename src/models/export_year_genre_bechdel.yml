@@ -3,7 +3,7 @@ version: 2
 exposures:
   - name: export_year_genre_bechdel
     depends_on:
-      - ref('movies_meta_with_bechdel_incl')
+      - ref('bechdel_movies_aggr_year_genre_bechdel')
     owner:
       name: Alma Liezenga
       email: alma.liezenga@gmail.com

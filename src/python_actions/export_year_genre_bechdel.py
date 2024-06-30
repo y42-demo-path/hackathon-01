@@ -11,7 +11,7 @@ import gspread
 
 @data_action
 def export_to_sheet(context, assets):
-    df = assets.ref('movies_meta_with_bechdel_incl')
+    df = assets.ref('bechdel_movies_aggr_year_genre_bechdel')
     # turn all columns to type string
     for column in df.columns.tolist():
         df[column] = df[column].astype(str)
