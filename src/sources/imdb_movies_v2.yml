@@ -5,10 +5,12 @@ sources:
     config:
       y42_source:
         type: python-ingest
-        function_size: S
+        function_size: L
       y42:
         apiVersion: v3
     meta:
       experts:
         users:
           - alma.liezenga@gmail.com
+    tables:
+      - name: imdb_movies

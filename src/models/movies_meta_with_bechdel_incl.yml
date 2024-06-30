@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: movies_meta_with_bechdel_incl
+  - name: bechdel_movies_aggr_year_genre_bechdel
     meta:
       experts:
         users:
