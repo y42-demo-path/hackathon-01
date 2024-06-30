@@ -17,25 +17,37 @@ sources:
         columns:
           - name: release_date
             data_type: TEXT
+            description: "release date, first occurrence"
           - name: isAdult
             data_type: NUMBER
+            description: "parental guidance"
           - name: averageRating
             data_type: FLOAT
+            description: final rating, based on all the ratings
           - name: genres
             data_type: TEXT
+            description: genres
           - name: budget
             data_type: NUMBER
+            description: total budget in USD
           - name: primaryTitle
             data_type: TEXT
+            description: title in English
           - name: originalTitle
             data_type: TEXT
+            description: original title in native language
           - name: numVotes
             data_type: NUMBER
+            description: total number of votes (ratings)
           - name: id
             data_type: TEXT
+            description: movie's ID used by IMDB repository
           - name: directors
             data_type: TEXT
+            description: directors
           - name: gross
             data_type: FLOAT
+            description: total gross worldwide in USD
           - name: runtimeMinutes
             data_type: NUMBER
+            description: total runtime in minutes

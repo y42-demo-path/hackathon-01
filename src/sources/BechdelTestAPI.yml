@@ -17,13 +17,19 @@ sources:
         columns:
           - name: imdbid
             data_type: TEXT
+            description: An ID which can be matched to the IMBd webpage for this movie.
           - name: year
             data_type: NUMBER
+            description: "The release year of the movie. "
           - name: rating
             data_type: NUMBER
+            description: "The Bechdel rating for the movie on a scale from 0-4, 4 is a pass,
+              0 means no women appear."
           - name: id
             data_type: NUMBER
+            description: The ID assigned by bechdeltest.com
           - name: title
             data_type: TEXT
+            description: The movie title
     description: "The API for https://bechdeltest.com/ where people can add new
       movies’ ratings on the Bechdel test. "
