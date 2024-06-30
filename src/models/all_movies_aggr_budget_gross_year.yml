@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: all_movies_aggr_budget_gross_year
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    config:
+      y42:
+        apiVersion: v1
