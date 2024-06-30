@@ -11,7 +11,7 @@ s_imdb AS (
 joined AS (
 	SELECT
 		si.imdb_id,
-		sb."title", 
+		si.original_title, 
 		si.release_year, 
 		sb.bechdel_rating,
 		sb.bechdel_rating_description,
