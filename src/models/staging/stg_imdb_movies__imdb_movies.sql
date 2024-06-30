@@ -9,6 +9,7 @@ renamed AS (
 		"id" AS imdb_id,
 		"primaryTitle" AS english_title,
 		"originalTitle" AS original_title,
+		RIGHT("release_date", 4) AS release_year, 
 		"averageRating" AS imdb_avg_rating,
 		"numVotes" AS num_votes_imdb_rating,
 		REGEXP_SUBSTR("genres", '[^,]+') AS first_genre, 
