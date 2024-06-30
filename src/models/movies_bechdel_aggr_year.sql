@@ -1,7 +1,7 @@
 WITH 
 
 b_movies AS (
-	SELECT * FROM {{ ref('bechdel_movies') }}
+	SELECT * FROM {{ ref('stg_bechdel_api__bechdel_api') }}
 ),
 
 aggregated AS (
