@@ -1,4 +1,5 @@
 import json
+import sys
 import pandas as pd
 
 import requests
@@ -9,8 +10,13 @@ from google.oauth2 import service_account
 import logging
 import gspread
 
+import subprocess
+
+
 @data_action
 def export_to_sheet(context, assets):
+    subprocess.check_call([sys.executable, '-m', 'pip3', 'install', 'gspread'])
+
     df = assets.ref('bechdel_movies_aggr_year_genre_bechdel')
     # turn all columns to type string
     for column in df.columns.tolist():
