@@ -10,8 +10,8 @@ s_imdb AS (
 
 joined AS (
 	SELECT
-		imdb_id,
-		sb.title, 
+		si.imdb_id,
+		sb."title", 
 		sb."year", 
 		sb.bechdel_rating,
 		sb.bechdel_rating_description,
@@ -19,8 +19,8 @@ joined AS (
 		si.num_votes_imdb_rating,
 		si.first_genre, 
 		si.all_genres,
-		si.budget,
-		si.gross
+		si."budget",
+		si."gross"
 	FROM 
     	s_imdb si
 	LEFT JOIN s_bechdel AS sb
