@@ -12,11 +12,7 @@ models:
     columns:
       - name: IMDB_ID
         data_type: TEXT
-      - name: NEW_BECHDEL_RATING
+      - name: NAME
         data_type: TEXT
-      - name: BECHDEL_COMMENT
-        data_type: TEXT
-      - name: SUBMITTER_NAME
-        data_type: TEXT
-      - name: SUBMITTER_E_MAIL
+      - name: E_MAIL
         data_type: TEXT
