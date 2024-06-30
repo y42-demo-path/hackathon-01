@@ -6,16 +6,16 @@ a_movies AS (
 
 aggregated AS (
 	SELECT
-		"year",
+		release_year,
 		AVG("budget") AS avg_budget,
         AVG("gross") AS avg_gross, 
         COUNT(*) AS total_movies,
 	FROM 
     	a_movies
 	GROUP BY 
-    	"year"
+    	RELEASE_YEAR
 	ORDER BY 
-    	"year"
+    	RELEASE_YEAR
 )
 
 select * from aggregated
