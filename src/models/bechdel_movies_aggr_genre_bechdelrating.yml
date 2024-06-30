@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bechdel_movies_aggr_genre_bechdelrating
+    meta:
+      experts:
+        users:
+          - alma.liezenga@gmail.com
+    config:
+      y42:
+        apiVersion: v1
