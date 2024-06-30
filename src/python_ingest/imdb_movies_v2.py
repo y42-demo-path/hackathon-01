@@ -8,12 +8,12 @@ import logging
 from y42.v1.decorators import data_loader
 
 @data_loader
-def imdb_movies(context) -> pd.DataFrame:
+def imdb_movies_2(context) -> pd.DataFrame:
     #1: Preparing the URL.
     base_url = "https://www.kaggle.com/api/v1"
-    owner_slug = "ashirwadsangwan"
-    dataset_slug = "imdb-dataset"
-    dataset_version = "790"
+    owner_slug = "shubhammaindola"
+    dataset_slug = "tmdb-top-rated-movies-dataset"
+    dataset_version = "2"
 
     url = f"{base_url}/datasets/download/{owner_slug}/{dataset_slug}?datasetVersionNumber={dataset_version}"
 
@@ -34,7 +34,7 @@ def imdb_movies(context) -> pd.DataFrame:
     zf = zipfile.ZipFile(io.BytesIO(response.content))
 
     #5: Reading the CSV from the zip file and converting it to a dataframe.
-    file_name = "title.basics.tsv"
+    file_name = "movie_dataset.csv"
     df = pd.read_csv(zf.open(file_name), sep='\t')
 
     logging.info(df.head())

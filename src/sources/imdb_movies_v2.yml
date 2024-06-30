@@ -13,4 +13,4 @@ sources:
         users:
           - alma.liezenga@gmail.com
     tables:
-      - name: imdb_movies
+      - name: imdb_movies_2
